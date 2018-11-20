@@ -1,0 +1,10 @@
+platform :ios, '8.0'
+target 'Sunlight’ do
+pod 'AFNetworking'
+pod 'MBProgressHUD', '~> 0.9.2'
+pod 'IQKeyboardManager', '~> 3.3.6'
+pod 'JSONModel'
+pod 'Masonry'
+pod 'SDWebImage', '~> 3.7.5'
+pod 'MJRefresh'
+end
