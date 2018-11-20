@@ -13,6 +13,10 @@
 		6C8B8DB921A3E6E00024ADBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C8B8DB821A3E6E00024ADBE /* Assets.xcassets */; };
 		6C8B8DBC21A3E6E00024ADBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C8B8DBA21A3E6E00024ADBE /* LaunchScreen.storyboard */; };
 		6C8B8DBF21A3E6E00024ADBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8B8DBE21A3E6E00024ADBE /* main.m */; };
+		6C8B8DCD21A3F6320024ADBE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8B8DCC21A3F6320024ADBE /* HomeViewController.m */; };
+		6C8B8DD121A3F8AE0024ADBE /* AppDelegate+RMService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8B8DD021A3F8AE0024ADBE /* AppDelegate+RMService.m */; };
+		6C8B8DD521A3F9420024ADBE /* RMTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8B8DD321A3F9410024ADBE /* RMTabBarControllerConfig.m */; };
+		6C8B8DDA21A4019D0024ADBE /* RMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8B8DD821A4019C0024ADBE /* RMNetworkManager.m */; };
 		80641C8B0114357F77088E8D /* libPods-Sunlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E35D513E22270BBAFFF24E9B /* libPods-Sunlight.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +32,14 @@
 		6C8B8DBB21A3E6E00024ADBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C8B8DBD21A3E6E00024ADBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C8B8DBE21A3E6E00024ADBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6C8B8DCB21A3F6320024ADBE /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		6C8B8DCC21A3F6320024ADBE /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		6C8B8DCF21A3F8AE0024ADBE /* AppDelegate+RMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+RMService.h"; sourceTree = "<group>"; };
+		6C8B8DD021A3F8AE0024ADBE /* AppDelegate+RMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+RMService.m"; sourceTree = "<group>"; };
+		6C8B8DD321A3F9410024ADBE /* RMTabBarControllerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMTabBarControllerConfig.m; sourceTree = "<group>"; };
+		6C8B8DD421A3F9420024ADBE /* RMTabBarControllerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMTabBarControllerConfig.h; sourceTree = "<group>"; };
+		6C8B8DD821A4019C0024ADBE /* RMNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNetworkManager.m; sourceTree = "<group>"; };
+		6C8B8DD921A4019D0024ADBE /* RMNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNetworkManager.h; sourceTree = "<group>"; };
 		E35D513E22270BBAFFF24E9B /* libPods-Sunlight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sunlight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EB329E4892B275F8FF654D /* Pods-Sunlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunlight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sunlight/Pods-Sunlight.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,9 +85,9 @@
 		6C8B8DAE21A3E6DF0024ADBE /* Sunlight */ = {
 			isa = PBXGroup;
 			children = (
-				6C8B8DC521A3E9D20024ADBE /* Home */,
-				6C8B8DAF21A3E6DF0024ADBE /* AppDelegate.h */,
-				6C8B8DB021A3E6DF0024ADBE /* AppDelegate.m */,
+				6C8B8DD721A401630024ADBE /* Network */,
+				6C8B8DCE21A3F85F0024ADBE /* CoreService */,
+				6C8B8DC821A3F5F10024ADBE /* Home */,
 				6C8B8DB221A3E6DF0024ADBE /* ViewController.h */,
 				6C8B8DB321A3E6DF0024ADBE /* ViewController.m */,
 				6C8B8DB521A3E6DF0024ADBE /* Main.storyboard */,
@@ -87,27 +99,59 @@
 			path = Sunlight;
 			sourceTree = "<group>";
 		};
-		6C8B8DC521A3E9D20024ADBE /* Home */ = {
+		6C8B8DC821A3F5F10024ADBE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				6C8B8DC721A3E9EF0024ADBE /* model */,
-				6C8B8DC621A3E9DF0024ADBE /* view */,
+				6C8B8DCA21A3F60A0024ADBE /* model */,
+				6C8B8DC921A3F5FF0024ADBE /* view */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		6C8B8DC621A3E9DF0024ADBE /* view */ = {
+		6C8B8DC921A3F5FF0024ADBE /* view */ = {
 			isa = PBXGroup;
 			children = (
+				6C8B8DCB21A3F6320024ADBE /* HomeViewController.h */,
+				6C8B8DCC21A3F6320024ADBE /* HomeViewController.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
 		};
-		6C8B8DC721A3E9EF0024ADBE /* model */ = {
+		6C8B8DCA21A3F60A0024ADBE /* model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		6C8B8DCE21A3F85F0024ADBE /* CoreService */ = {
+			isa = PBXGroup;
+			children = (
+				6C8B8DD221A3F9220024ADBE /* Tabbar */,
+				6C8B8DB021A3E6DF0024ADBE /* AppDelegate.m */,
+				6C8B8DAF21A3E6DF0024ADBE /* AppDelegate.h */,
+				6C8B8DCF21A3F8AE0024ADBE /* AppDelegate+RMService.h */,
+				6C8B8DD021A3F8AE0024ADBE /* AppDelegate+RMService.m */,
+			);
+			path = CoreService;
+			sourceTree = "<group>";
+		};
+		6C8B8DD221A3F9220024ADBE /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				6C8B8DD421A3F9420024ADBE /* RMTabBarControllerConfig.h */,
+				6C8B8DD321A3F9410024ADBE /* RMTabBarControllerConfig.m */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		6C8B8DD721A401630024ADBE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6C8B8DD921A4019D0024ADBE /* RMNetworkManager.h */,
+				6C8B8DD821A4019C0024ADBE /* RMNetworkManager.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		86A222EDA53811DDB29D6C47 /* Pods */ = {
@@ -192,19 +236,19 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Sunlight/Pods-Sunlight-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/ShareSDK3/SDK/ShareSDK/Support/Required/ShareSDK.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -216,15 +260,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Sunlight-checkManifestLockResult.txt",
 			);
@@ -240,9 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C8B8DDA21A4019D0024ADBE /* RMNetworkManager.m in Sources */,
+				6C8B8DD521A3F9420024ADBE /* RMTabBarControllerConfig.m in Sources */,
 				6C8B8DB421A3E6DF0024ADBE /* ViewController.m in Sources */,
 				6C8B8DBF21A3E6E00024ADBE /* main.m in Sources */,
 				6C8B8DB121A3E6DF0024ADBE /* AppDelegate.m in Sources */,
+				6C8B8DD121A3F8AE0024ADBE /* AppDelegate+RMService.m in Sources */,
+				6C8B8DCD21A3F6320024ADBE /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
